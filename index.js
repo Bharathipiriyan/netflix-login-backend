@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: true }))
 
 app.get("/login", function (req, res) {
 
+    res.send("Backend is running ✅")
+
     if (req.query.username === username & req.query.password == password) {
         res.send(true)
     }
