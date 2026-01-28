@@ -10,11 +10,13 @@ const password = 123
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 
+app.get("/", function (req, res) {
+    res.send("Backend is running ✅")
+})
+
 app.get("/login", function (req, res) {
 
-    res.send("Backend is running ✅")
-
-    if (req.query.username === username & req.query.password == password) {
+    if (req.query.username === username && req.query.password == password) {
         res.send(true)
     }
 
